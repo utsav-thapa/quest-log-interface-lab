@@ -1,0 +1,31 @@
+public class TreasureFound {
+    public String treasureName;
+    public String rarity;
+
+    public TreasureFound(String treasureName, String rarity) {
+        this.treasureName = treasureName;
+        this.rarity = rarity;
+    }
+
+    public String getName(){
+        return this.treasureName;
+    }
+
+    public int getPoints() {
+        switch (rarity){
+            case "common":
+                return 25;
+            case "rare":
+                return 75;
+            case "legendary":
+                return 150;
+            default:
+                return 0;
+        }
+    }
+
+    public String getSummary(){
+        return "Found " + this.rarity + " " + this.treasureName + " for " + getPoints() + " points.";
+
+    }
+}
