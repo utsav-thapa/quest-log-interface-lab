@@ -66,6 +66,7 @@ public class Program {
 
         do{
             System.out.println(mainMenu);
+            System.out.print("Enter: ");
             int userInput = Integer.parseInt(scanner.nextLine());
 
             switch ((userInput)) {
@@ -73,21 +74,29 @@ public class Program {
                     questLog.addEvent(new MonsterDefeat("Angry Chicken", 2, false));
                     questLog.addEvent(new MonsterDefeat("Goblin Intern", 1, false));
                     questLog.addEvent(new MonsterDefeat("Karen the Dragon", 5, true));
+                    System.out.println("Successfully added defeated monsters.");
                     break;
                 case 2:
                     questLog.addEvent(new TreasureFound("Cursed Rubber Duck", "common"));
                     questLog.addEvent(new TreasureFound("Golden Sandwich", "rare"));
                     questLog.addEvent(new TreasureFound("Legendary Left Sock", "legendary"));
+                    System.out.println("Successfully added found treasures.");
+
                     break;
                 case 3:
                     questLog.addEvent(new TrapTriggered("Banana Peel of Doom", 2));
                     questLog.addEvent(new TrapTriggered("Lego Floor Trap", 4));
+                    System.out.println("Successfully added triggered traps. ");
+
                     break;
                 case 4:
                     questLog.addEvent(new RoomExplored("Grandma's Secret Basement", true));
                     questLog.addEvent(new RoomExplored("Abandoned Meme Archive", false));
+                    System.out.println("Successfully added explored rooms.");
+
                     break;
                 case 5:
+                    System.out.println("Here's the summary.");
                     questLog.printSummary();
                     break;
                 case 0:

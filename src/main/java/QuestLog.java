@@ -52,7 +52,8 @@ public class QuestLog {
 
     public void printSummary(){
         String outputHead = """
-                QUEST LOG
+                -------------------------------------
+                            QUEST LOG
                 -------------------------------------""";
         System.out.println(outputHead);
         int number = 1;
