@@ -64,8 +64,9 @@ public class QuestLog {
 
         String outputFooter = """
                  -------------------------------------""";
+        System.out.println(outputFooter);
         System.out.println("Total Score: " + getTotalScore());
-        System.out.println("Best event: " + getLowestScoringEvent().getSummary());
+        System.out.println("Best event: " + getHighestScoringEvent().getSummary());
         System.out.println("Worst event: " + getLowestScoringEvent().getSummary());
 
     }
